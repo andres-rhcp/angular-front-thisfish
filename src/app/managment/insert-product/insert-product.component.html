@@ -1,0 +1,54 @@
+<mat-toolbar color="link">
+    <mat-toolbar-row>
+        <span>New products</span>
+        <span class="spacer"></span>
+
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<table>
+    <tr>
+        <th>
+            <mat-form-field>
+                <input matInput [(ngModel)]="product_sku">
+                <mat-hint>Product code</mat-hint>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput [(ngModel)]="product_name">
+                <mat-hint>Name</mat-hint>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput id="correo" autofocus [(ngModel)]="product_type">
+                <mat-hint>Type</mat-hint>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput [(ngModel)]="stock">
+                <mat-hint>Stock</mat-hint>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput [(ngModel)]="date_update">
+                <mat-hint>Date update</mat-hint>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput [(ngModel)]="user_update">
+                <mat-hint>User update</mat-hint>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput [(ngModel)]="observation">
+                <mat-hint>Detail</mat-hint>
+            </mat-form-field>
+
+        </th>
+
+    </tr>
+</table>
+<br>
+
+<div style="text-align: right; margin-right: 50px;">
+    <div class="button">
+        <button type="submit" mat-raised-button color="primary" (click)="insertRecurso()">Insert
+            <mat-icon aria-hidden="false">save</mat-icon></button>
+    </div>
+</div>
+
+<br>

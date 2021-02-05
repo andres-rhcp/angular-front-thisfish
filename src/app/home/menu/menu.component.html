@@ -1,0 +1,22 @@
+<mat-nav-list>
+    <mat-accordion [multi]="true">
+        <mat-expansion-panel [(expanded)]="xpandStatus">
+
+            <a mat-list-item (click)="listaRelaciones('products')">
+                <span><mat-icon>bar_chart</mat-icon>&nbsp;</span>Products Managment
+
+            </a>
+            <a mat-list-item (click)="listaRelaciones('ship')">
+                <span><mat-icon>credit_card</mat-icon>&nbsp;</span>Ship product Managment
+
+            </a>
+
+            <a mat-list-item (click)="listaRelaciones('stock')">
+                <span><mat-icon>view_comfy</mat-icon>&nbsp;</span>Stck prodcuts Dashboad
+            </a>
+
+
+        </mat-expansion-panel>
+
+    </mat-accordion>
+</mat-nav-list>

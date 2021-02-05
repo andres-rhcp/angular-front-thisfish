@@ -1,0 +1,75 @@
+<mat-toolbar color="link">
+    <mat-toolbar-row>
+        <mat-form-field>
+            <mat-label>Buscar</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Gabriel Garc...." #input>
+        </mat-form-field>
+        <span class="spacer"></span>
+        <button mat-icon-button (click)="cargarListaRecursos()">
+    <mat-icon>update</mat-icon>
+  </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+<div class="mat-elevation-z8">
+    <table mat-table class="matTable" [dataSource]="dataSource">
+        <!-- Position Column -->
+        <ng-container matColumnDef="product_sku">
+            <th mat-header-cell *matHeaderCellDef class="estilo"><b>Code</b></th>
+            <td mat-cell *matCellDef="let element" class="estilo"><b>{{element.product_sku}}</b></td>
+        </ng-container>
+        <ng-container matColumnDef="product_name">
+            <th mat-header-cell *matHeaderCellDef><b>Name</b></th>
+            <td mat-cell *matCellDef="let element"> {{element.product_name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="product_type">
+            <th mat-header-cell *matHeaderCellDef><b>Type</b></th>
+            <td mat-cell *matCellDef="let element"> {{element.product_type}} </td>
+        </ng-container>
+        <ng-container matColumnDef="stock|">
+            <th mat-header-cell *matHeaderCellDef><b>Stock</b></th>
+            <td mat-cell *matCellDef="let element"><b>{{element.stock}}</b></td>
+        </ng-container>
+        <ng-container matColumnDef="date_update">
+            <th mat-header-cell *matHeaderCellDef><b>Update</b></th>
+            <td mat-cell *matCellDef="let element"> {{element.date_update}} </td>
+        </ng-container>
+        <ng-container matColumnDef="user_update">
+            <th mat-header-cell *matHeaderCellDef><b>User update</b></th>
+            <td mat-cell *matCellDef="let element"> {{element.user_update}} </td>
+        </ng-container>
+        <ng-container matColumnDef="observation">
+            <th mat-header-cell *matHeaderCellDef><b>Detail</b></th>
+            <td mat-cell *matCellDef="let element"> {{element.observation}} </td>
+        </ng-container>
+        <!-- Symbol Column -->
+        <!--  -->
+        <!-- Action Column -->
+        <ng-container matColumnDef="ver">
+            <th mat-header-cell *matHeaderCellDef><b>Ver</b></th>
+            <td mat-cell *matCellDef="let element" class="action-link">
+                <button mat-icon-button (click)="openInformacionDialog(element)">
+        <mat-icon>preview</mat-icon>
+      </button>
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="ficha">
+            <th mat-header-cell *matHeaderCellDef><b>Ficha</b></th>
+            <td mat-cell *matCellDef="let element" class="action-link">
+                <button mat-icon-button (click)="openFichaDialog(element)">
+        <mat-icon>chrome_reader_mode</mat-icon>
+      </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+        <!-- Row shown when there is no matching data. -->
+        <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">No se encontraron resultados "{{input.value}}"</td>
+        </tr>
+    </table>
+    <mat-paginator [length]="10" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" (page)="pageEvent = $event">
+    </mat-paginator>
+</div>

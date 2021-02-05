@@ -1,0 +1,35 @@
+.md-button-right .button-group {
+    position: absolute;
+    right: 0px;
+    margin: 0;
+}
+
+.fill-space {
+    flex: 1 1 auto;
+}
+
+.docs-footer {
+    padding: 12px;
+    font-size: 12px;
+}
+
+.docs-footer-list {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 8px;
+}
+
+.docs-footer-version {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    .angular-material-logo {
+        height: 40px;
+        margin: 10px 0 10px 16px;
+    }
+    .version {
+        margin: 0 40px;
+    }
+}

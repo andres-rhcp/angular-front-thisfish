@@ -1,0 +1,50 @@
+<mat-toolbar color="primary" *ngIf=(!currentUser) style="align-content: right;">
+    <span class="md-ink-ripple">ThisFish Inc. Software Developer Test</span>
+
+</mat-toolbar>
+<router-outlet *ngIf=(!currentUser)></router-outlet>
+<div *ngIf=(currentUser) class="md-toolbar-tools" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar color="primary" class="example-toolbar">
+        <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon> 
+    </button>
+        <h1 class="example-app-name">{{aplicacion}}</h1>
+        <span flex></span>
+        <div class="md-button-right fill-space">
+        </div>
+        <div class="md-toolbar-tools">
+            <button mat-stroked-button [matMenuTriggerFor]="menu" class="md-button-right fill-space" onchange="update()">{{nombre_usuario}}
+            
+              <mat-icon>person</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="openDialog()">Cerrar Sesi&oacute;n
+          <mat-icon>exit_to_app</mat-icon>
+        </button>
+            </mat-menu>
+        </div>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="example-sidenav-container" opened="true" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <!--menu-->
+        <mat-sidenav #snav [mode]="(isHandset$ | async) ? 'over' : 'side'" opened="true" style="top: 56px; bottom: 0px; transform: none; visibility: visible;" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" class="mat-drawer mat-sidenav ng-trigger mat-drawer-side ng-star-inserted mat-sidenav-fixed"
+            opened>
+            <app-menu></app-menu>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <router-outlet name="componentes"></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
+<app-loading></app-loading>
+
+<footer class="docs-footer" [class.is-next-version]="isNextVersion">
+    <div class="docs-footer-list">
+
+
+        <div class="docs-footer-version">
+            <span class="version">Andrés Delgado M. 2021</span>
+        </div>
+
+    </div>
+</footer>

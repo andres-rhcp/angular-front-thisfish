@@ -1,0 +1,36 @@
+:host {
+    display: flex;
+    justify-content: center;
+    margin: 70px 0px;
+}
+
+.mat-form-field {
+    width: 100%;
+    min-width: 300px;
+}
+
+mat-card-title,
+mat-card-content {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.example-margin {
+    margin: 0 10px;
+}
+
+.mainDiv {
+    position: relative;
+}
+
+#add-button {
+    right: 20px;
+    bottom: 10px;
+    left: auto;
+    position: fixed;
+}

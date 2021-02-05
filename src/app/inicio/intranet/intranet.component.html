@@ -1,0 +1,96 @@
+<link rel="icon" type="image/x-icon" href="assets/img/sol.ico">
+<div class="parent">
+    <div style=" left: 20px; top: 0; text-align: left;">
+        <img width="350px" src="assets/img/logo-login.png" id="login" style=" top: 30px; left: 100px; margin-left: 20px;" />
+    </div>
+    <div class="example-button-row">
+        <table>
+            <tr>
+                <td>
+                    <mat-card class="example-card">
+                        <button mat-fab color="accent" routerLink="../seguimiento">
+                        <div class="icon" style="margin-top: 10px;">   
+                             <mat-icon [inline]="true">location_searching</mat-icon>
+                        </div>
+                        </button>
+                        <mat-card-footer style="text-align: center;">Seguimiento de trámites</mat-card-footer>
+                    </mat-card>
+                </td>
+                <td>
+                    <mat-card class="example-card">
+                        <a mat-fab color="accent" target="_blank" href="../login">
+                            <div class="icon" style="margin-top: 20px;">
+                                <mat-icon [inline]="true">local_library</mat-icon>
+                            </div>
+                        </a>
+                        <mat-card-footer style="text-align: center;">Gestión de <br> Biblioteca</mat-card-footer>
+                    </mat-card>
+                </td>
+                <td>
+                    <mat-card class="example-card">
+                        <a mat-fab color="accent" target="_blank" (click)="abrirFieldWeb()">
+                            <div class="icon" style="margin-top: 20px;">
+                                <mat-icon [inline]="true">business_center</mat-icon>
+                            </div>
+                        </a>
+                        <mat-card-footer style="text-align: center;">Fiel<br>web</mat-card-footer>
+                    </mat-card>
+                </td>
+                <td>
+                    <mat-card class="example-card">
+                        <a mat-fab color="primary" target="_blank" href="http://www.cotacachienlinea.gob.ec/web_pago_cuenta.php">
+                            <div class="icon" style="margin-top: 20px;">
+                                <mat-icon [inline]="true">cloud_download</mat-icon>
+                            </div>
+                        </a>
+                        <mat-card-footer style="text-align: center;">Títulos de <br> créditos</mat-card-footer>
+                    </mat-card>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-card class="example-card">
+                        <a mat-fab color="accent" target="_blank" href="http://www.cotacachienlinea.gob.ec/sip_gd/log/index.php">
+                            <div class="icon" style="margin-top: 20px;">
+                                <mat-icon [inline]="true">library_books</mat-icon>
+                            </div>
+                        </a>
+                        <mat-card-footer style="text-align: center;">Gestión <br> documental</mat-card-footer>
+                    </mat-card>
+                </td>
+                <td>
+                    <mat-card class="example-card">
+                        <a mat-fab color="primary" target="_blank" href="http://186.4.213.78:8080/facturas.html">
+                            <div class="icon" style="margin-top: 20px;">
+                                <mat-icon [inline]="true">class</mat-icon>
+                            </div>
+                        </a>
+                        <mat-card-footer style="text-align: center;">Facturación <br> electrónica</mat-card-footer>
+                    </mat-card>
+                </td>
+                <td>
+                    <mat-card class="example-card">
+                        <button mat-fab color="primary" routerLink="../seguimiento" disabled>
+                        <div class="icon" style="margin-top: 10px;">   
+                             <mat-icon [inline]="true">check</mat-icon>
+                        </div>
+                        </button>
+                        <mat-card-footer style="text-align: center;">Revisión de <br> pagos</mat-card-footer>
+                    </mat-card>
+                </td>
+                <td>
+                    <mat-card class="example-card">
+                        <button mat-fab color="primary" routerLink="../seguimiento" disabled>
+                        <div class="icon" style="margin-top: 10px;">   
+                             <mat-icon [inline]="true">payment</mat-icon>
+                        </div>
+                        </button>
+                        <mat-card-footer style="text-align: center;">Pagos en <br> línea</mat-card-footer>
+                    </mat-card>
+                </td>
+            </tr>
+
+
+        </table>
+
+    </div>

@@ -1,0 +1,36 @@
+
+    <div mat-dialog-content>
+  <div class="example-container "> 
+        <mat-form-field appearance="outline" >
+        <mat-label>Origen</mat-label>
+        <input matInput placeholder="" [(ngModel)]="data.origen">
+        <mat-icon matSuffix>create</mat-icon>
+    </mat-form-field>
+ </div>
+ <div class="example-container "> 
+    <mat-form-field appearance="outline">
+        <mat-label>Destino</mat-label>
+        <input matInput placeholder="" [(ngModel)]="data.destino">
+        <mat-icon matSuffix>create</mat-icon>
+    </mat-form-field>
+</div>
+<div class="example-container "> 
+    <mat-form-field appearance="outline">
+        <mat-label>Descripción</mat-label>
+        <input matInput placeholder="" [(ngModel)]="data.descripcion" >
+        <mat-icon matSuffix>create</mat-icon>
+    </mat-form-field>
+</div>
+<div class="example-container "> 
+        <mat-form-field appearance="outline">
+            <mat-label>Ruta</mat-label>
+            <input matInput placeholder="" [(ngModel)]="data.ruta">
+            <mat-icon matSuffix>create</mat-icon>
+        </mat-form-field>
+</div>
+
+</div>
+<div mat-dialog-actions style="align-content: center;">
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial (click)="crearTabla()" form="id_servidor_form"> <mat-icon>save</mat-icon>GUARDAR</button>
+  <button mat-button (click)="onNoClick()"><mat-icon>close</mat-icon>CANCELAR</button>
+</div>

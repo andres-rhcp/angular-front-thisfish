@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>{{data.title}}</h1>
+<div mat-dialog-content>
+  <p>{{ data.message }}</p>
+
+</div>
+<div mat-dialog-actions style="align-content: center;">
+  <button mat-button [mat-dialog-close]="'OK'" cdkFocusInitial> <mat-icon>done</mat-icon>ACEPTAR</button>
+  <button mat-button (click)="onNoClick()"><mat-icon>close</mat-icon>CANCELAR</button>
+</div>

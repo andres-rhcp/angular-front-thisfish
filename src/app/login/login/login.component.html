@@ -1,0 +1,34 @@
+<mat-card *ngIf=(!currentUser)>
+    <img src="assets/img/thisfish.png" width="300px">
+    <mat-card-title></mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <p>
+                <mat-form-field>
+                    <input type="text" matInput placeholder="User" formControlName="usuario">
+                    <mat-error *ngIf="hasError('usuario', 'required')">Required file</mat-error>
+                    <mat-error *ngIf="hasError('usuario', 'minlength')">Min length 3</mat-error>
+                    <mat-error *ngIf="hasError('usuario', 'maxlength')">Max length 10</mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                    <input matInput placeholder="Password" [type]=" 'password' " formControlName="password" required>
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" type="button">
+                        </button>
+                    <mat-error *ngIf="hasError('password', 'required')">Required field</mat-error>
+                    <mat-error *ngIf="hasError('password', 'minlength')">Min length 3</mat-error>
+                    <mat-error *ngIf="hasError('password', 'maxlength')">Max length 20</mat-error>
+                </mat-form-field>
+            </p>
+            <div class="button">
+                <button type="submit" mat-raised-button color="accent">Login</button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>
+
+<div>
+    <button mat-fab color="accent" id="add-button" matTooltip="Volver al inicio" routerLink="../intranet">
+            <i class="material-icons" >home</i></button>
+</div>

@@ -1,0 +1,16 @@
+.mat-form-field {
+    display: block;
+}
+.custom-modalbox >  mat-dialog-container {
+    padding: 0px;
+}
+.md-dialog-container {
+    width: 250px;
+}
+.my-class .mat-dialog-container{
+    height: 400px;
+    width: 600px;
+    border-radius: 10px;
+    background: lightcyan;
+    color: #039be5;
+  }

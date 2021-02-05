@@ -1,0 +1,17 @@
+li span {
+    font-weight: normal;
+}
+
+span {
+    font-weight: normal;
+}
+
+.example-card {
+    max-width: 660px;
+    background: azure;
+}
+
+.example-header-image {
+    /* background-image: url('../../../assets/img/book.png'); */
+    background-size: cover;
+}

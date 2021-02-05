@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ConstantsService {
-  readonly baseAppUrl: string = 'http://192.168.94.130:8000/';
+  readonly baseAppUrl: string = 'http://0.0.0.0:8000/';
   readonly codigoApp: string = 'TFW';
   readonly pageSize: Array<number> = [5, 10, 20, 30, 50, 100];
   readonly urlFielWeb: string = 'https://www.fielweb.com/cuenta/login.aspx?tk=';

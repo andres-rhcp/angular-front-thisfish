@@ -12,21 +12,16 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { FormsModule } from '@angular/forms';
 
-import { IngresarRecursosComponent} from '../biblioteca/ingresar-recursos/ingresar-recursos.component';
-import { ListaRecursosComponent} from '../biblioteca/lista-recursos/lista-recursos.component';
-import { FichaRecursoComponent} from '../biblioteca/ficha-recurso/ficha-recurso.component';
-import { IngresarPrestamosComponent} from '../biblioteca/ingresar-prestamos/ingresar-prestamos.component';
-import { ListaRecursosBusquedaComponent} from '../biblioteca/lista-recursos-busqueda/lista-recursos-busqueda.component';
-import { ListaPrestamosComponent} from '../biblioteca/lista-prestamos/lista-prestamos.component';
-
 import { InsertProductComponent} from '../managment/insert-product/insert-product.component';
 import { ManagmentProductComponent } from '../managment/managment-product/managment-product.component';
 import { DashboardProductComponent } from '../managment/dashboard-product/dashboard-product.component';
+import { ReceiveComponent } from '../managment/receive/receive.component';
+import { ShipmentComponent } from '../managment/shipment/shipment.component';
 
 
 
 @NgModule({
-  declarations: [DashboardComponent, DialogComponent, DialogNewComponent, DialogEditComponent, IngresarRecursosComponent, ListaRecursosComponent, FichaRecursoComponent, IngresarPrestamosComponent, ListaRecursosBusquedaComponent, ListaPrestamosComponent, InsertProductComponent, ManagmentProductComponent, DashboardProductComponent
+  declarations: [DashboardComponent, DialogComponent, DialogNewComponent, DialogEditComponent, InsertProductComponent, ManagmentProductComponent, DashboardProductComponent, ReceiveComponent, ShipmentComponent
   ],
 
   imports: [
@@ -45,15 +40,11 @@ import { DashboardProductComponent } from '../managment/dashboard-product/dashbo
     DialogComponent,
     DialogNewComponent,
     DialogEditComponent,
-    IngresarRecursosComponent,
-    ListaRecursosComponent,
-    FichaRecursoComponent,
-    IngresarPrestamosComponent,
-    ListaRecursosBusquedaComponent,
-    ListaPrestamosComponent,
     InsertProductComponent,
     ManagmentProductComponent,
-    DashboardProductComponent
+    DashboardProductComponent,
+    ReceiveComponent,
+    ShipmentComponent
   ]
 }) 
 

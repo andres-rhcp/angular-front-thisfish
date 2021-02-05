@@ -57,7 +57,7 @@ export class AppComponent {
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogComponent, {
       width: '305px',
-      data: { title: 'Mensaje', message: '¿Está seguro de salir del sistema?' },
+      data: { message: '¿Are you sure to log out?' },
       panelClass: 'my-class'
     }); 
     dialogRef.afterClosed().subscribe(result => {

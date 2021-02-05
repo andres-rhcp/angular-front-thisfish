@@ -42,12 +42,12 @@ export class LoginComponent implements OnInit {
     this.authenticationService.login(this.loginForm.controls.usuario.value, this.loginForm.controls.password.value).pipe(first()).subscribe(
       respuesta => {
         this.loading.hide();
-        this.router.navigate([this.returnUrl])
+        this.router.navigate(['login'])
       },
       error => {
         this.loading.hide();
         console.log(error)
-        this.snackbarService.openSnackBar('Error al consumir servicio.', "error", "Error");
+        this.snackbarService.openSnackBar('Username or password incorrects', "error", "Error");
       }
     )
   }

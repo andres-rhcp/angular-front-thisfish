@@ -5,8 +5,8 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { SelectionModel } from '@angular/cdk/collections';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { InformacionRecursoComponent } from '../../biblioteca/informacion-recurso/informacion-recurso.component';
-import { FichaRecursoComponent } from '../../biblioteca/ficha-recurso/ficha-recurso.component';
+import { ReceiveComponent } from '../../managment/receive/receive.component';
+import { ShipmentComponent } from '../../managment/shipment/shipment.component';
 
 @Component({
   selector: 'app-managment-product',
@@ -69,23 +69,29 @@ cargarListaRecursos(evt?: any) {
 }
 
 openInformacionDialog(element): void {
-  const dialogRef = this.dialog.open(InformacionRecursoComponent, {
-    width: '740px',
-    data: { title: 'Ver archivo', message: 'Ver archivo', id: element.rec_mfn, titulo: element.rec_titulo, autor: element.rec_autor_personal },
+  const dialogRef = this.dialog.open(ReceiveComponent, {
+    width: '540px',
+    data: {  data: element.data, product_sku: element.product_sku, product_name: element.product_name,
+            product_type: element.product_type, stock: element.stock, user_update:element.user_update,
+            date_update:element.date_update,observation:element.observation},
     panelClass: 'my-class'
   });
   dialogRef.afterClosed().subscribe(result => {
+    this.cargarListaRecursos();
   });
 }
 
 openFichaDialog(element): void {
-  const dialogRef = this.dialog.open(FichaRecursoComponent, {
-    width: '740px',
+  const dialogRef = this.dialog.open(ShipmentComponent, {
+    width: '540px',
     height: '450px',
-    data: { title: 'Ver archivo', message: 'Ver archivo', id: element.rec_mfn, titulo: element.rec_titulo, autor: element.rec_autor_personal },
+    data: {  data: element.data, product_sku: element.product_sku, product_name: element.product_name,
+      product_type: element.product_type, stock: element.stock, user_update:element.user_update,
+      date_update:element.date_update,observation:element.observation},
     panelClass: 'my-class'
   });
   dialogRef.afterClosed().subscribe(result => {
+    this.cargarListaRecursos();
   });
 }
 applyFilter(event: Event) {

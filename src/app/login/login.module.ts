@@ -6,10 +6,9 @@ import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login/login.component';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule } from '@angular/forms';
-import { InformacionRecursoComponent } from '../biblioteca/informacion-recurso/informacion-recurso.component';
 
 @NgModule({
-  declarations: [LoginComponent, InformacionRecursoComponent],
+  declarations: [LoginComponent],
   imports: [
     CommonModule,
     LoginRoutingModule,
@@ -18,7 +17,6 @@ import { InformacionRecursoComponent } from '../biblioteca/informacion-recurso/i
     FormsModule,
     MatProgressBarModule
   ], entryComponents: [
-    InformacionRecursoComponent
     
   ]
 })

@@ -277,11 +277,22 @@ export class ServidorService {
       }));
   }
   getAllProducts(){
-    return this.http.options(`${this.constantsService.baseAppUrl}api/restmigra`)
+    return this.http.get<any[]>(`${this.constantsService.baseAppUrl}api/restmigra`)
       .pipe(map(respuesta => {
         return respuesta;
       }));
   }
+
+  updateProductQuantities(product_sku, product_name, product_type, stock, date_update, user_update, observation) {
+    date_update = new Date()
+    return this.http.put<any>(`${this.constantsService.baseAppUrl}api/restmigra/`+product_sku,
+      { product_sku, product_name, product_type, stock, date_update, user_update, observation })
+      .pipe(map(respuesta => {
+        return respuesta;
+      }));
+  }
+
+
   getRecursoById(id): Observable<any> {
     return this.http.post<any[]>(`${this.constantsService.baseAppUrl}biblioteca/getRecursoById`, { id })
       .pipe(map(respuesta => {
@@ -291,14 +302,13 @@ export class ServidorService {
 
   insertRecurso(product_sku, product_name, product_type, stock, date_update, user_update, observation) {
     date_update = new Date()
-    // return this.http.post(`${this.constantsService.baseAppUrl}api/restmigra`,
-    //   {
-    //     product_sku, product_name, product_type, stock, date_update, user_update, observation
-    //   })
-    //   .pipe(map(respuesta => {
-    //     return respuesta;
-    //   }));
-      return this.http.post(`${this.constantsService.baseAppUrl}api/restmigra`, {product_sku, product_name, product_type, stock, date_update, user_update, observation});
+    return this.http.post<any>(`${this.constantsService.baseAppUrl}api/restmigra`,
+      {
+        product_sku, product_name, product_type, stock, date_update, user_update, observation
+      })
+      .pipe(map(respuesta => {
+        return respuesta;
+      }));
   }
 
   getAllPrestamosByEstado(pre_estado): Observable<any> {

@@ -1,0 +1,140 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+table {
+    width: 100%;
+    border: black;
+}
+
+.text-red {
+    color: red;
+}
+
+.text-green {
+    color: green;
+}
+
+.text-orange {
+    color: orange;
+}
+
+.text-red-bold {
+    color: red;
+    font-weight: bold;
+}
+
+.text-green-bold {
+    color: green;
+    font-weight: bold;
+}
+
+.mat-table {
+    overflow: auto;
+    max-height: 700px;
+    border: black;
+}
+
+.mat-header-cell .mat-sort-header-sorted {
+    color: #0A0A0A;
+}
+
+.md-pagination-wrapper {
+    width: auto !important;
+}
+
+.md-row:nth-child(even) {
+    background-color: #EDF1F5;
+}
+
+.md-row:nth-child(odd) {
+    background-color: #FDFDFB;
+}
+
+td.mat-cell {
+    /* row padding */
+    padding: 3px 3px;
+    /* row border */
+    /* border-bottom: 1px solid #5DBCD2;
+border-top: 1px solid #5DBCD2;
+border-left: 1px solid #5DBCD2; */
+    height: 10px;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.example-card {
+    max-width: 900px;
+}
+
+.example-header-image {
+    background-image: url('/assets/img/lista.png');
+    background-size: cover;
+}
+
+.cuerpo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+    flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.example-headers-align .mat-form-field+.mat-form-field {
+    margin-left: 8px;
+}
+
+.mainDiv {
+    position: relative;
+}
+
+#add-button {
+    right: 20px;
+    bottom: 10px;
+    left: auto;
+    position: fixed;
+}
+
+.tableSection {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.matTable {
+    overflow: scroll;
+    height: 10px;
+}
+
+.mat-header-cell {
+    text-align: left;
+    background-color: lightgray;
+}
+
+.mat-cell {
+    text-align: left;
+}
+mat-form-field {
+    width: 70%;
+    font: 40px;
+}

@@ -1,0 +1,36 @@
+<div>
+    <h3 mat-dialog-title>Receive product</h3>
+</div>
+<ng-template #elseBlock>
+    <h3 mat-dialog-title> </h3>
+</ng-template>
+
+<div mat-dialog-content>
+</div>
+
+<table style="text-align: left;">
+    <tr>
+        <th>
+
+            <p>Code: <span>{{product_sku}}</span></p>
+            <p>Name: <span>{{product_name}}</span></p>
+            <p>Type: <span>{{product_type}}</span></p>
+            <p>Stock: <span>{{stock}}</span></p>
+            <p>Date: <span>{{date_update | date: 'dd MMM yyyy hh:mm'}}</span></p>
+            <p>User: <span>{{user_update}}</span></p>
+            <p>Detail: <span>{{observation}}</span></p>
+            
+        </th>
+        <th>
+            <div style="font-size: 30px; margin-left: 30px;">
+            <mat-form-field >
+                <input matInput [(ngModel)]="cantReceive">
+                <mat-hint>Quantitie received</mat-hint>
+            </mat-form-field>
+        </div>
+        </th>
+    </tr>
+</table>
+<div mat-dialog-actions class="mat-typography" style="text-align: right;">
+    <button mat-raised-button color="primary" (click)="receiveQuantitie()"><mat-icon>check</mat-icon>ACEPTAR</button>
+</div>
